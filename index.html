@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Zoológico ZooAventura - Conservación de especies y educación ambiental">
+    <title>ZooAventura - Inicio</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="icon" href="imagenes/logo.jpg" type="image/jpg">
+</head>
+
+<body>
+    <a class="skip-link" href="#main-content" aria-label="Saltar al contenido principal">Saltar al contenido</a>
+
+    <header class="cabecera" role="banner">
+        <div class="contenedor">
+            <img src="imagenes/logo.jpg" alt="Logo ZooAventura - Imagen circular con animales de la selva" width="150" role="img">
+            <h1>ZooAventura</h1>
+            <p class="eslogan">Conectando con la naturaleza</p>
+        </div>
+
+        <nav aria-label="Navegación principal" role="navigation">
+            <h2 class="sr-only">Menú principal</h2>
+            <ul class="menu" role="menubar">
+                <li role="menuitem"><a href="index.html" class="activo" aria-current="page">Inicio</a></li>
+                <li role="menuitem"><a href="animales.html">Conoce nuestros animales</a></li>
+                <li role="menuitem"><a href="contacto.html">Planifica tu visita al zoológico</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content" class="contenido-principal contenedor" role="main" aria-labelledby="main-heading">
+        <h2 id="main-heading" class="sr-only">Contenido principal</h2>
+        
+        <section aria-labelledby="bienvenida-heading">
+            <h2 id="bienvenida-heading">¡Bienvenido a nuestro zoológico!</h2>
+            <div class="tarjeta" role="region" aria-label="Información de bienvenida">
+                <p>En ZooAventura nos dedicamos al cuidado y conservación de especies en peligro. Nuestro equipo de
+                    expertos trabaja día a día para brindarles la mejor calidad de vida.</p>
+                <figure>
+                    <img src="imagenes/leon.jpg" alt="León majestuoso descansando sobre una gran roca bajo la sombra de un árbol frondoso en su hábitat natural" class="imagen-destacada">
+                    <figcaption class="sr-only">León en su hábitat natural</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section aria-labelledby="novedades-heading">
+            <h2 id="novedades-heading">Novedades</h2>
+            <div class="grid-animales" role="list">
+                <article class="animal" role="listitem" aria-labelledby="habitat-heading">
+                    <h3 id="habitat-heading">Nuevo hábitat acuático</h3>
+                    <figure>
+                        <img src="imagenes/habitatacuatico.jpg" alt="Moderno hábitat acuático con cristales panorámicos que simula un ecosistema acuático natural">
+                        <figcaption class="sr-only">Nuevo hábitat acuático</figcaption>
+                    </figure>
+                    <p>Recientemente inauguramos una zona especial para especies acuáticas con vistas increíbles.</p>
+                </article>
+                <article class="animal" role="listitem" aria-labelledby="panda-heading">
+                    <h3 id="panda-heading">Nacimiento de panda</h3>
+                    <figure>
+                        <img src="imagenes/bebepanda.jpeg" alt="Adorable cría de panda gigante jugando activamente con su madre en un entorno seguro lleno de bambú">
+                        <figcaption class="sr-only">Cría de panda gigante</figcaption>
+                    </figure>
+                    <p>Celebramos el nacimiento de nuestra nueva cría de panda gigante, ¡ven a conocerla!</p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="pie-pagina" role="contentinfo">
+        <div class="contenedor">
+            <p>© 2025 ZooAventura. Todos los derechos reservados.</p>
+            <address>
+                Av. de la Fauna 123, Ciudad Natural<br>
+                Tel: <a href="tel:+521234567891">52 123 456 7891</a>
+            </address>
+        </div>
+    </footer>
+
+    <script src="funciones.js" defer></script>
+</body>
+
+</html>

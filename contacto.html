@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Planifica tu visita al zoológico ZooAventura - Horarios, tarifas y formulario de contacto">
+    <title>Visítanos - ZooAventura</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="icon" href="imagenes/logo.jpg" type="image/jpg">
+</head>
+
+<body>
+    <a class="skip-link" href="#main-content" aria-label="Saltar al contenido principal">Saltar al contenido</a>
+
+    <header class="cabecera" role="banner">
+        <div class="contenedor">
+            <img src="imagenes/logo.jpg" alt="Logo ZooAventura - Imagen circular con animales de la selva" width="150"
+                role="img">
+            <h1>Visítanos</h1>
+        </div>
+
+        <nav aria-label="Navegación principal" role="navigation">
+            <h2 class="sr-only">Menú principal</h2>
+            <ul class="menu" role="menubar">
+                <li role="menuitem"><a href="index.html">Inicio</a></li>
+                <li role="menuitem"><a href="animales.html">Conoce nuestros animales</a></li>
+                <li role="menuitem"><a href="contacto.html" class="activo" aria-current="page">Planifica tu visita al
+                        zoológico</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content" class="contenido-principal contenedor" role="main" aria-labelledby="main-heading">
+        <h2 id="main-heading" class="sr-only">Contenido principal - Planifica tu visita</h2>
+
+        <section aria-labelledby="contacto-heading">
+            <h2 id="contacto-heading">Planifica tu visita</h2>
+
+            <div class="dos-columnas">
+                <article class="info-contacto" aria-labelledby="info-heading">
+                    <h3 id="info-heading">Información general</h3>
+                    <p>Estamos abiertos de martes a domingo de 9:00 a 18:00 hrs.</p>
+
+                    <h4 id="tarifas-heading">Tarifas de entrada</h4>
+                    <ul role="list">
+                        <li role="listitem">Adultos: $150 pesos mexicanos</li>
+                        <li role="listitem">Niños (3-12 años): $80 pesos mexicanos</li>
+                        <li role="listitem">Adultos mayores (60+ años): $70 pesos mexicanos</li>
+                        <li role="listitem">Personas con discapacidad: $50 pesos mexicanos</li>
+                    </ul>
+
+                    <h4 id="ubicacion-heading">Nuestra ubicación</h4>
+                    <address>
+                        Av. de la Fauna 123<br>
+                        Ciudad Natural, CP 12345<br>
+                        <a href="tel:+52123456789100" aria-label="Llamar al teléfono del zoológico">52 123 456 7891</a>
+                    </address>
+                </article>
+
+                <form id="formulario-contacto" class="formulario" novalidate aria-labelledby="form-heading">
+                    <h3 id="form-heading">Contáctanos</h3>
+
+                    <div class="grupo-formulario">
+                        <label for="nombre">Nombre completo <span class="sr-only">(campo obligatorio)</span><span
+                                aria-hidden="true">*</span></label>
+                        <input type="text" id="nombre" name="nombre" required aria-required="true"
+                            aria-describedby="nombre-error" aria-invalid="false">
+                        <div id="nombre-error" role="alert" class="error-message" aria-live="assertive"></div>
+                    </div>
+
+                    <div class="grupo-formulario">
+                        <label for="email">Correo electrónico <span class="sr-only">(campo obligatorio)</span><span
+                                aria-hidden="true">*</span></label>
+                        <input type="email" id="email" name="email" required aria-required="true"
+                            aria-describedby="email-error email-ayuda" aria-invalid="false">
+                        <div id="email-ayuda" class="ayuda-texto sr-only">
+                            Ejemplo: usuario@correo.com
+                        </div>
+                        <div id="email-error" role="alert" class="error-message" aria-live="assertive"></div>
+                    </div>
+
+                    <div class="grupo-formulario">
+                        <label for="telefono">Teléfono (opcional)</label>
+                        <input type="tel" id="telefono" name="telefono" aria-describedby="telefono-ayuda">
+                        <div id="telefono-ayuda" class="ayuda-texto sr-only">
+                            Formato sugerido: 52 1234 5678 9100
+                        </div>
+                    </div>
+
+                    <fieldset class="grupo-formulario">
+                        <legend>Motivo de contacto <span class="sr-only">(campo obligatorio)</span><span
+                                aria-hidden="true">*</span></legend>
+
+                        <div class="radio-group" role="radiogroup" aria-labelledby="motivo-heading">
+                            <span id="motivo-heading" class="sr-only">Selecciona un motivo de contacto</span>
+
+                            <div role="radio" aria-checked="false" tabindex="-1" id="consulta-radio">
+                                <input type="radio" id="consulta" name="motivo" value="consulta" required
+                                    aria-required="true" class="sr-only">
+                                <label for="consulta">Consulta general sobre servicios</label>
+                            </div>
+
+                            <div role="radio" aria-checked="false" tabindex="-1" id="visita-radio">
+                                <input type="radio" id="visita" name="motivo" value="visita" required
+                                    aria-required="true" class="sr-only">
+                                <label for="visita">Programar visita grupal</label>
+                            </div>
+
+                            <div role="radio" aria-checked="false" tabindex="-1" id="donacion-radio">
+                                <input type="radio" id="donacion" name="motivo" value="donacion" required
+                                    aria-required="true" class="sr-only">
+                                <label for="donacion">Información sobre donaciones</label>
+                            </div>
+                        </div>
+                        <div id="motivo-error" role="alert" class="error-message" aria-live="assertive"></div>
+                    </fieldset>
+
+
+                    <div class="grupo-formulario">
+                        <label for="mensaje">Mensaje detallado <span class="sr-only">(campo obligatorio)</span><span
+                                aria-hidden="true">*</span></label>
+                        <textarea id="mensaje" name="mensaje" rows="5" required aria-required="true"
+                            aria-describedby="mensaje-error mensaje-ayuda" aria-invalid="false"></textarea>
+                        <div id="mensaje-ayuda" class="ayuda-texto sr-only">
+                            Comparte los detalles de tu consulta o solicitud
+                        </div>
+                        <div id="mensaje-error" role="alert" class="error-message" aria-live="assertive"></div>
+                    </div>
+
+                    <div class="grupo-formulario">
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="boletin" name="boletin">
+                            <label for="boletin">Deseo recibir el boletín mensual con noticias del zoológico</label>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn-enviar" aria-describedby="submit-ayuda">
+                        Enviar mensaje
+                    </button>
+                    <div id="submit-ayuda" class="sr-only">
+                        Envía tu mensaje al equipo de ZooAventura
+                    </div>
+
+                    <p class="nota" aria-hidden="true">* Campos obligatorios</p>
+                    <p class="sr-only">Todos los campos marcados con asterisco son obligatorios</p>
+
+                    <!-- Contenedor para mensajes de estado del formulario -->
+                    <div id="formulario-estado" aria-live="polite" aria-atomic="true" role="status"></div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="pie-pagina" role="contentinfo">
+        <div class="contenedor">
+            <p>© 2025 ZooAventura. Todos los derechos reservados.</p>
+            <address>
+                Av. de la Fauna 123, Ciudad Natural<br>
+                Tel: <a href="tel:+521234567891">52 123 456 7891</a>
+            </address>
+        </div>
+    </footer>
+
+    <script src="funciones.js" defer></script>
+</body>
+
+</html>

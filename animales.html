@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Conoce los animales del zoológico ZooAventura - Información detallada de especies">
+    <title>Nuestros Animales - ZooAventura</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="icon" href="imagenes/logo.jpg" type="image/jpg">
+</head>
+<body>
+    <a class="skip-link" href="#main-content" aria-label="Saltar al contenido principal">Saltar al contenido</a>
+    
+    <header class="cabecera" role="banner">
+        <div class="contenedor">
+            <img src="imagenes/logo.jpg" alt="Logo ZooAventura - Imagen circular con animales de la selva" width="150" role="img">
+            <h1>Nuestros Animales</h1>
+        </div>
+        
+        <nav aria-label="Navegación principal" role="navigation">
+            <h2 class="sr-only">Menú principal</h2>
+            <ul class="menu" role="menubar">
+                <li role="menuitem"><a href="index.html">Inicio</a></li>
+                <li role="menuitem"><a href="animales.html" class="activo" aria-current="page">Conoce nuestros animales</a></li>
+                <li role="menuitem"><a href="contacto.html">Planifica tu visita al zoológico</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content" class="contenido-principal contenedor" role="main" aria-labelledby="main-heading">
+        <h2 id="main-heading" class="sr-only">Contenido principal - Nuestros animales</h2>
+        
+        <!-- Contenedor para mensajes de estado -->
+        <div id="estado-carga" aria-live="polite" aria-atomic="true" class="sr-only"></div>
+        
+        <section aria-labelledby="filtros-heading" role="search">
+            <h2 id="filtros-heading">Conoce a nuestros residentes</h2>
+            
+            <form id="filtro-animales" class="filtros" role="search" aria-label="Filtros de búsqueda de animales">
+                <fieldset>
+                    <legend class="sr-only">Opciones de filtrado</legend>
+                    
+                    <div class="grupo-formulario">
+                        <label for="busqueda">Buscar por nombre o especie:</label>
+                        <input type="text" id="busqueda" name="busqueda" 
+                               placeholder="Escribe el nombre o especie del animal" 
+                               aria-describedby="busqueda-ayuda">
+                        <span id="busqueda-ayuda" class="sr-only">
+                            Puedes buscar por nombre como "Scar" o por especie como "León"
+                        </span>
+                    </div>
+                    
+                    <div class="grupo-formulario">
+                        <label for="habitat">Filtrar por hábitat:</label>
+                        <select id="habitat" name="habitat" aria-describedby="habitat-ayuda">
+                            <option value="">Mostrar todos los hábitats</option>
+                            <option value="sabana">Sabana africana</option>
+                            <option value="jungla">Jungla tropical</option>
+                            <option value="bosque">Bosque de bambú</option>
+                        </select>
+                        <span id="habitat-ayuda" class="sr-only">
+                            Filtra los animales según su hábitat natural
+                        </span>
+                    </div>
+                    
+                    <div class="grupo-botones">
+                        <button type="button" id="btn-filtrar" aria-describedby="filtrar-ayuda">
+                            Aplicar filtros
+                        </button>
+                        <span id="filtrar-ayuda" class="sr-only">
+                            Aplica los filtros seleccionados para mostrar animales específicos
+                        </span>
+                        
+                        <button type="reset" id="btn-limpiar" aria-describedby="limpiar-ayuda">
+                            Limpiar filtros
+                        </button>
+                        <span id="limpiar-ayuda" class="sr-only">
+                            Remueve todos los filtros y muestra todos los animales
+                        </span>
+                    </div>
+                </fieldset>
+            </form>
+            
+            <div id="resultados-animales" class="resultados" role="region" 
+                 aria-labelledby="resultados-titulo" aria-live="polite" aria-atomic="true">
+                <h3 id="resultados-titulo" class="sr-only">Resultados de animales</h3>
+                <!-- Los animales se cargarán aquí desde XML -->
+                <p class="cargando" role="alert">Cargando información de los animales...</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="pie-pagina" role="contentinfo">
+        <div class="contenedor">
+            <p>© 2025 ZooAventura. Todos los derechos reservados.</p>
+            <address>
+                Av. de la Fauna 123, Ciudad Natural<br>
+                Tel: <a href="tel:+521234567891">52 123 456 7891</a>
+            </address>
+        </div>
+    </footer>
+
+    <script src="funciones.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<animales role="list" aria-label="Lista de animales del zoológico">
+    <animal role="listitem" aria-labelledby="nombre-1 especie-1">
+        <nombre id="nombre-1">Scar</nombre>
+        <especie id="especie-1">León (Panthera leo)</especie>
+        <habitat>Sabana africana</habitat>
+        <edad>5 años</edad>
+        <descripcion>Nuestro león macho dominante. Llegó al zoológico en 2022.</descripcion>
+    </animal>
+    <animal role="listitem" aria-labelledby="nombre-2 especie-2">
+        <nombre id="nombre-2">Po</nombre>
+        <especie id="especie-2">Panda gigante (Ailuropoda melanoleuca)</especie>
+        <habitat>Bosque de bambú</habitat>
+        <edad>3 años</edad>
+        <descripcion>Nacido en cautiverio, nuestro panda más joven y juguetón.</descripcion>
+    </animal>
+    <animal role="listitem" aria-labelledby="nombre-3 especie-3">
+        <nombre id="nombre-3">Melman</nombre>
+        <especie id="especie-3">Jirafa (Giraffa camelopardalis)</especie>
+        <habitat>Sabana africana</habitat>
+        <edad>8 años</edad>
+        <descripcion>La más alta de nuestro zoológico, mide 5.2 metros.</descripcion>
+    </animal>
+    <animal role="listitem" aria-labelledby="nombre-4 especie-4">
+        <nombre id="nombre-4">Orejas</nombre>
+        <especie id="especie-4">Elefante africano (Loxodonta africana)</especie>
+        <habitat>Sabana africana</habitat>
+        <edad>12 años</edad>
+        <descripcion>Nuestro elefante más grande, pesa aproximadamente 5 toneladas.</descripcion>
+    </animal>
+    <animal role="listitem" aria-labelledby="nombre-5 especie-5">
+        <nombre id="nombre-5">Burbujas</nombre>
+        <especie id="especie-5">Delfín nariz de botella (Tursiops truncatus)</especie>
+        <habitat>Ambiente acuático</habitat>
+        <edad>7 años</edad>
+        <descripcion>El más activo de nuestros delfines, le encanta interactuar con los visitantes.</descripcion>
+    </animal>
+    <animal role="listitem" aria-labelledby="nombre-6 especie-6">
+        <nombre id="nombre-6">Pluma</nombre>
+        <especie id="especie-6">Guacamaya roja (Ara macao)</especie>
+        <habitat>Jungla tropical</habitat>
+        <edad>4 años</edad>
+        <descripcion>Nuestra guacamaya más colorida, puede imitar algunos sonidos humanos.</descripcion>
+    </animal>
+</animales>
